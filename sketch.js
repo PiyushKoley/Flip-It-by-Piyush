@@ -4,9 +4,11 @@ function startGame(dropdown) {
 }
 
 const container = document.getElementById("gameboard");
+
 function removeBlocks() {
   container.innerHTML = "";
 }
+
 function shuffle(array) {
     const length = array == null ? 0 : array.length
     if (!length) {
@@ -22,7 +24,8 @@ function shuffle(array) {
       result[index] = value
     }
     return result
-  }
+}
+
 function getRandomNumbers(level) {
   const pairNumbers = (level * level) / 2;
   const numbersCheckingSet = new Set();
@@ -41,7 +44,9 @@ function getRandomNumbers(level) {
   });
   return shuffle(randomNumberWithPairs);
 }
+
 let score = 0;
+
 function updateScore(newscore,timestamp=false){
     score = newscore;
     document.getElementById('score').innerText='Current Score: '+score;
@@ -49,6 +54,7 @@ function updateScore(newscore,timestamp=false){
         document.getElementById("score").innerText+=" YOU HAVE WON, you took: "+(Date.now()-timestamp)/1000+" seconds"
     }
 }
+
 function changeGrid(level) {
   /**
    * Remove existing blocks

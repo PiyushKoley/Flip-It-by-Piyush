@@ -8,24 +8,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body> 
-    <h3>
-        First select your grid from dropdown, then click on any box you like, the aim of the game is to select all correct pair of boxes with
-        minimum mistakes. 1 point is for correct pairing, and -0.3 for wrong pairing, you can click on the boxes to see the number in it.
-        Pairing happens when two boxes are selected with same number.
-        After selecting grid type, click on the boxes to play the game
-    </h3>  
-    <p id="score"></p> 
-    <div>
-        <label for="options">Choose your grid</label>
-        <select id="options" onchange="startGame(this)">
-            <option disabled selected>Choose Your Level</option>
-            <option value="4"> 4*4</option>
-            <option value="6"> 6*6</option>
-        </select>
-    </div>
-    <div id="gameboard"></div>
+    <div class="top-container">
+        <h3>
+            First select your grid from dropdown, then click on any box you like, the aim of the game is to select all correct pair of boxes with
+            minimum mistakes. 1 point is for correct pairing, and -0.3 for wrong pairing, you can click on the boxes to see the number in it.
+            Pairing happens when two boxes are selected with same number.
+            After selecting grid type, click on the boxes to play the game
+        </h3>   
+        <p id="score">Current Score: 0</p> 
     
-    <h5>DEVELOPED BY PIYUSH KOLEY - FLIP CARD GAME - ALL RIGHTS RESERVED 2022</h5>
+        <br>
+        <div class="opt">
+            <label for="options">Choose your grid:</label>
+            <select id="options" onchange="startGame(this)">
+                <option disabled selected>Choose Your Level</option>
+                <option value="4"> 4*4</option>
+                <option value="6"> 6*6</option>
+            </select>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="gameboard"></div>
+    <br>
+    <div class="bottom-container">
+        <h5>DEVELOPED BY PIYUSH KOLEY - FLIP IT GAME - ALL RIGHTS RESERVED 2022</h5>
+    </div>
     <script src="sketch.js"></script>
 </body>
 </html>
